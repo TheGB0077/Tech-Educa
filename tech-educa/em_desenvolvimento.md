@@ -3,7 +3,6 @@
     <h1>Página em desenvolvimento!</h1>
 </div>
 
-
 <style scoped>
     .image-container {
         display: flex;
@@ -21,15 +20,14 @@
                 min-width: 300px;
                 flex-direction: column;
         }
-        
+
         .image-container > img {
             padding: 0 40px 0 40px;
         }
-
 
         .image-container > h1 {
             font-size: 1.5rem;
         }
     }
-    
+
 </style>

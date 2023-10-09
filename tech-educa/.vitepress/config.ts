@@ -15,7 +15,7 @@ export default withPwa(defineConfig({
 
   lang: "pt-BR",
   title: "Tech Educa",
-  head: [["link", {rel: 'icon', href: '/img/favicon.ico'}]],
+  head: [["link", { rel: "icon", href: "/img/favicon.ico" }]],
   description: "Um portal para seu aprendizado!",
 
   themeConfig: {
@@ -81,8 +81,8 @@ export default withPwa(defineConfig({
       label: "Nesta página",
       level: "deep",
     },
-        socialLinks: [
-      { icon: 'github', link: 'https://github.com/' }
+    socialLinks: [
+      { icon: "github", link: "https://github.com/" },
     ],
   },
 
@@ -106,5 +106,5 @@ export default withPwa(defineConfig({
   pwa: {
     outDir: "./../dist/",
     registerType: "autoUpdate",
-  }
+  },
 }));

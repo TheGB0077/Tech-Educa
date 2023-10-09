@@ -107,7 +107,7 @@ fimalgoritmo
 Além dos operadores relacionais vistos acima, também temos os operadores lógicos, que são utilizados para combinar expressões lógicas. Veja a tabela abaixo:
 
 | Operador |    Significado    |           Exemplo           |
-|:--------:|:-----------------:|:---------------------------:|
+| :------: | :---------------: | :-------------------------: |
 |   `e`    |     Lógica E      | `idade >= 18 e idade <= 60` |
 |   `ou`   |     Lógica OU     | `idade < 18 ou idade > 60`  |
 |  `nao`   | Negação da Lógica |     `nao (idade >= 18)`     |
