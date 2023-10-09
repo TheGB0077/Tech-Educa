@@ -1,0 +1,15 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@theme/*": ["./tech-educa/.vitepress/theme/*"]
+    }
+  },
+  "include": [
+    "env.d.ts",
+    "tech-educa/.vitepress/**/*",
+    "tech-educa/**/*",
+    "tech-educa/**/*.md"
+  ],
+  "exclude": ["node_modules/"]
+}

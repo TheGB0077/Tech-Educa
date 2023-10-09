@@ -1,0 +1,539 @@
+// --------------------------------
+// Ajustes na Home
+// --------------------------------
+
+.VPHome {
+  padding: 0!important;
+}
+
+// Ajuste na Navbar
+.VPNavBar {
+  height: auto!important;
+  transition: 0.5s;
+}
+
+// Modificação do code group na visualização do celular
+@media (min-width: 380px) {
+  .vp-code-group .tabs {
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+// Diminui a margem entre imagens e paragrafos nas páginas de conteúdo
+.vp-doc p > img {
+  margin: 20px 0 !important;
+}
+
+// Transição suave da navbar onScroll
+.VPNavBar .content-body {
+  transition: none !important;
+}
+
+// Tamanho fixo para a logo da navbar
+.VPNavBarTitle img.logo {
+  height: 30px;
+  margin-inline-end: 12px;
+}
+
+// Tamanho do line-height diminuido
+.VPNavBarMenu .VPNavBarMenuLink {
+  min-height: var(--vp-nav-height-mobile);
+  line-height: 1.32;
+  @media (min-width: 960px) {
+    min-height: var(--vp-nav-height-desktop);
+  }
+}
+
+// Capitulos compactos em páginas de conteúdo
+.VPDocAsideOutline .outline-link {
+  white-space: normal;
+  text-overflow: initial;
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+// Pesquisa fixa no lado esquerdo da navbar
+.VPNavBarSearch.search {
+  justify-content: flex-end;
+  margin-right: 32px;
+}
+
+// --------------------------------
+// Ajustes Docs
+// --------------------------------
+
+.VPContent.has-sidebar {
+  @media (min-width: 960px) {
+    padding-left: calc(var(--vp-sidebar-width) + 16px) !important;
+  }
+  @media (min-width: 1440px) {
+    padding-right: 0 !important;
+  }
+}
+
+.VPDoc.has-sidebar.has-aside {
+  @media (min-width: 960px) and (max-width: 1500px) {
+    padding-left: 0;
+  }
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 820px !important;
+}
+
+.VPDoc.has-sidebar.has-aside .container > .content {
+  @media (min-width: 1500px) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+.vp-doc p,
+.vp-doc li {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.vp-doc p {
+  margin: 24px 0;
+}
+
+.vp-doc p a {
+  display: inline-block;
+}
+
+.vp-doc p > img,
+.vp-doc > div > img {
+  margin: 40px 0;
+  border-radius: 6px;
+}
+
+.vp-doc pre code {
+  font-size: 12.5px !important;
+}
+
+.vp-code-group .tabs label {
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+.vp-doc div[class*='language-'] {
+  margin: 32px 0 40px;
+}
+
+.vp-doc .header-anchor {
+  @media (min-width: 960px) {
+    position: absolute;
+    left: -28px;
+    padding: 0 18px;
+    transform: scale(0.94);
+  }
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  width: max-content;
+  max-width: 100%;
+}
+.vp-doc h1 + p,
+.vp-doc h2 + p {
+  margin-top: 0;
+}
+.vp-doc h2 {
+  padding-top: 16px !important;
+}
+.vp-doc h3 {
+  margin-top: 40px !important;
+}
+
+.vp-doc p > strong > a,
+.vp-doc p > a,
+.vp-doc li > strong > a,
+.vp-doc li > a,
+.vp-doc td > strong > a,
+.vp-doc td > a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: 0.1s ease;
+  transition-property: color, text-underline-offset;
+  :root.dark & {
+    color: rgb(131, 222, 255);
+  }
+  &:hover,
+  :root.dark &:hover {
+    color: var(--vp-c-text-1);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+}
+
+// Remove elemento da visão mobile
+.VPNavBar .curtain {
+  display: none;
+}
+
+// Correção do width para páginas não doc
+.VPNavBar .container {
+  max-width: unset;
+}
+
+// Ajuste para o overlay do conteúdo da sidebar
+.VPNavBar.has-sidebar .content {
+  --vp-sidebar-width: 320px;
+  padding-left: var(--vp-sidebar-width) !important;
+  padding-right: 32px !important;
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 32px;
+    padding-right: 0 !important;
+  }
+}
+
+// Logo fixa no lado esquerdo
+.VPNavBar.has-sidebar .title {
+  padding-left: 16px !important;
+  border-bottom: none;
+  @media (max-width: 960px) {
+    padding-left: 0 !important;
+  }
+}
+
+// Links do menu com altura ajustada
+.VPNavBarMenu.menu {
+  height: calc(100% - 16px);
+}
+
+.VPNavBarMenu.menu a {
+  font-size: 13px;
+  margin: 0 4px;
+  opacity: 0.8;
+  transition-duration: 0.1s;
+  transition-property: color, opacity, box-shadow;
+  &:hover:not(.active) {
+    opacity: 1;
+    color: var(--vp-c-text-1);
+  }
+}
+
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-text-1) !important;
+  box-shadow: inset 0 -1px 0 0 var(--vp-c-brand);
+  opacity: 1 !important;
+}
+
+// --------------------------------
+// -- Sidebar
+// --------------------------------
+
+
+// Ajuste no estilo padrão de exibição de links
+.VPSidebar {
+  --active-indicator-padding: 16px;
+  --vp-sidebar-width: 308px;
+  --vp-new-padding: calc(32px - var(--active-indicator-padding));
+  padding-left: var(--vp-new-padding) !important;
+  padding-right: var(--vp-new-padding) !important;
+  padding-bottom: 32px !important;
+  width: var(--vp-sidebar-width) !important;
+  @media (max-width: 1500px) {
+    --vp-sidebar-width: 272px;
+  }
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 308px;
+  }
+}
+// Tamanho horizontal do Link não limitado
+#VPSidebarNav .group {
+  @media (min-width: 960px) {
+    width: unset;
+  }
+}
+#VPSidebarNav.nav {
+  margin-top: 8px;
+}
+
+.VPSidebarGroup.collapsed .items {
+  opacity: 0;
+}
+
+
+// Alinha a borda recolhida do contêiner do grupo de itens com a
+// borda superior / sombra da caixa do primeiro item da lista de links.
+.VPSidebarGroup.collapsible:not(.collapsed) .items {
+  margin-top: 9px;
+}
+
+// Alinhe o título do grupo com os links dos itens
+.VPSidebarGroup .title {
+  padding-left: var(--active-indicator-padding);
+}
+
+// Ignore o menu de navegação superior e o de navegação móvel
+.VPLink:not(.VPNavBarMenuLink):not(.VPNavScreenMenuLink) {
+  line-height: 1.1;
+  // novos estilos de link
+  &.link {
+    margin: 0;
+    padding: 9px var(--active-indicator-padding) !important;
+    transition-duration: 0.1s;
+    transition-property: background-color;
+
+    // Somente personalize links ativos de nível superior
+    .VPSidebarItem.level-1 > .item > & {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: -14px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-color: var(--vp-c-brand);
+        opacity: 0;
+        transition-duration: 0.1s;
+        transition-property: opacity;
+        :root:not(.dark) & {
+        left: -14px;
+      }
+      }
+    }
+    .VPSidebarItem.has-active.level-1 > .item > & {
+      position: relative;
+      border-radius: 6px;
+      background-color: #fff;
+      :root.dark & {
+        background-color: var(--vp-c-bg);
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    .text {
+      padding: 0;
+      font-size: 13px;
+      line-height: 1.32;
+      transition: none !important;
+      .VPSidebarItem.is-active > .item & {
+        color: var(--vp-c-text-1) !important;
+      }
+    }
+    &:hover .text {
+      color: var(--vp-c-text-1) !important;
+    }
+  }
+}
+.link-text {
+  font-size: 13px !important;
+  line-height: 1.32 !important;
+}
+
+.VPSidebarItem.level-0:not(.collapsed) .item + .items {
+  margin-block-start: 8px;
+}
+.VPSidebarItem.level-0:not(.collapsed) > .item + .items {
+  margin-block-start: 12px;
+}
+
+.VPSidebarItem.level-0 {
+  padding-bottom: 12px !important;
+  &.collapsed {
+    padding: 0 !important;
+  }
+}
+
+
+// Alinhamento do cabeçalho da seção com os links abaixo
+.VPSidebarItem .item h2.text {
+  padding-left: 16px;
+  color: var(--vp-c-text-2) !important;
+  transition: none;
+}
+.VPSidebarItem .item:hover h2.text,
+.VPSidebarItem:not(.collapsed) .item h2.text {
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPSidebarItem .caret {
+  transform: scale(0.8);
+}
+.VPSidebarItem .caret-icon {
+  transition-duration: 0.16s !important;
+}
+
+// --------------------------------
+// -- Aside dos Docs
+// --------------------------------
+
+// Aside mais amplo em todas as telas
+.VPDoc .aside {
+  padding-left: 0;
+  @media (min-width: 1380px) {
+    max-width: 248px;
+  }
+  @media (min-width: 1500px) {
+    max-width: 300px;
+  }
+  @media (min-width: 1600px) {
+    max-width: 328px;
+  }
+}
+
+// Adiciona espaço entre o título e a lista, sem afetar o marcador de progresso
+.VPDocAside .outline-title {
+  margin-block-end: -1px;
+  transform: translateY(-6px);
+}
+
+// Ajuste do espaço entre os links do aside, sem afetar o marcador de progresso
+
+.VPDocAside .outline-link {
+  padding: 6px 0;
+  font-size: 12.5px;
+  transition-duration: 0.1s;
+}
+
+
+// --------------------------------
+// Customização dos blocos
+// --------------------------------
+
+
+.vp-doc .custom-block {
+  margin: 48px 0;
+  padding: 32px 32px 32px 76px;
+  border: none;
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 0 1px var(--block-border-color);
+
+  @media (max-width: 500px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &:not(:root.dark &) {
+    --vp-custom-block-tip-bg: rgb(246, 252, 250);
+    --vp-custom-block-tip-border: rgba(0, 136, 120, 0.5);
+    --vp-custom-block-tip-text: rgb(0, 125, 111);
+    --vp-custom-block-warning-text: rgb(202, 135, 0);
+    --vp-custom-block-warning-border: rgb(255, 200, 0);
+    --vp-custom-block-warning-bg: rgba(255, 200, 0, 0.032);
+  }
+  :root.dark & {
+    --vp-custom-block-tip-text: hsl(165 100% 60%);
+    --vp-custom-block-tip-border: hsl(172, 100%, 19%);
+    --vp-custom-block-warning-text: rgb(255, 183, 0);
+    box-shadow:
+      inset 0 0 0 1px var(--block-border-color);
+    background-color: var(--vp-c-bg-alt);
+  }
+
+  &.info {
+    --block-border-color: var(--vp-custom-block-info-border);
+    --block-icon-color: var(--vp-custom-block-info-text);
+    --block-icon-url: url('/icons/info.svg');
+  }
+  &.tip {
+    --block-border-color: var(--vp-custom-block-tip-border);
+    --block-icon-color: var(--vp-custom-block-tip-text);
+    --block-icon-url: url('/icons/lightbulb.svg');
+  }
+  &.warning {
+    --block-border-color: var(--vp-custom-block-warning-border);
+    --block-icon-color: var(--vp-custom-block-warning-text);
+    --block-icon-url: url('/icons/seal-warning.svg');
+  }
+  &.danger {
+    --block-border-color: var(--vp-custom-block-danger-border);
+    --block-icon-color: var(--vp-custom-block-danger-text);
+    --block-icon-url: url('/icons/warning-diamond.svg');
+  }
+  &.details {
+    --block-border-color: var(--vp-custom-block-details-border);
+    --block-icon-color: var(--vp-custom-block-details-text);
+    --block-icon-url: url('/icons/dots-three-circle.svg');
+  }
+}
+
+h2 + .custom-block {
+  margin-top: 32px !important;
+}
+
+.vp-doc .custom-block p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 1.8;
+  
+  &.custom-block-title {
+    position: relative;
+    margin-bottom: 8px;
+    @media (max-width: 500px) {
+      margin-left: 42px;
+      margin-bottom: 14px;
+    }
+  }
+}
+.vp-doc .custom-block p.custom-block-title::before,
+.vp-doc .custom-block summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -44px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--block-icon-color);
+  -webkit-mask-image: var(--block-icon-url);
+          mask-image: var(--block-icon-url);
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  @media (max-width: 500px) {
+    left: -40px;
+  }
+}
+
+.vp-doc .custom-block p:not(.custom-block-title),
+.vp-doc .custom-block ol,
+.vp-doc .custom-block ul {
+  color: var(--vp-c-text-1);
+}
+.vp-doc .custom-block ol,
+.vp-doc .custom-block ul {
+  margin: 12px 0;
+}
+
+.vp-doc .custom-block a {
+  transition-duration: 0.1s;
+}
+
+.vp-doc .custom-block ul {
+  margin-bottom: 0;
+}
+
+.vp-doc .custom-block summary {
+  position: relative;
+  margin: 0;
+  &::marker {
+    content: '➕\a0\a0\a0';
+  }
+}
+.vp-doc .custom-block[open] summary::marker {
+  content: '➖\a0\a0\a0';
+}
+
+.vp-doc .custom-block div[class*='language-'] {
+  margin: 24px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@vite-pwa/vitepress": "^0.2.1",
+    "@vue/tsconfig": "^0.4.0",
+    "dprint": "^0.41.0",
+    "sass": "^1.64.1",
+    "vite-plugin-pwa": "^0.16.5",
+    "vitepress": "^1.0.0-rc.20",
+    "vue": "^3.3.4"
+  },
+  "scripts": {
+    "dev": "vitepress dev tech-educa",
+    "build": "vitepress build tech-educa",
+    "preview": "vitepress preview tech-educa"
+  },
+  "dependencies": {},
+  "type": "module"
+}

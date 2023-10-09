@@ -1,0 +1,12 @@
+.idea/
+node_modules/
+dist/
+drafts/
+tech-educa/.vitepress/cache/
+tech-educa/.vitepress/dist/
+
+# lock files
+bun.lockb
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
