@@ -33,5 +33,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "tech-educa"
-          entrypoint: "index.html" 
+          entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts" 
           root: "./dist"
