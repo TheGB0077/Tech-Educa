@@ -55,6 +55,11 @@ export default withPwa(defineConfig({
       },
     },
 
+    editLink: {
+      pattern: "https://pr.new/TheGB0077/Tech-Educa/edit/main/tech-educa/:path",
+        text: "Edite esta página no StackBlitz",
+    },
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Como contribuir!", link: "contribua/como_contribuir" },
