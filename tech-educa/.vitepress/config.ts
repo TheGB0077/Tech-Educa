@@ -3,10 +3,15 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
+  vite: {
+    define: {
+      __DATE__: `${new Date().toISOString()}`,
+    },
+  },
   locales: {
     root: {
       label: "Português",
-      lang: "pt_BR",
+      lang: "pt-BR",
     },
   },
 
@@ -14,7 +19,13 @@ export default withPwa(defineConfig({
 
   lang: "pt-BR",
   title: "Tech Educa",
-  head: [["link", { rel: "icon", href: "/img/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/img/favicon.ico" }],
+    ["meta", { name: "theme-color", content: "#46cb8a" }],
+    ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "#46cb8a" }],
+    ["meta", { name: "msapplication-TileImage", content: "/img/PWA/maskable_icon_x192.png" }],
+    ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
+  ],
   description: "Um portal para seu aprendizado!",
 
   themeConfig: {
@@ -97,7 +108,46 @@ export default withPwa(defineConfig({
   ignoreDeadLinks: false,
 
   pwa: {
+    base: "/",
+    scope: "/",
     outDir: "./../dist/",
     registerType: "autoUpdate",
+    includeManifestIcons: true,
+    manifest: {
+      start_url: "/",
+      name: "Tech Educa",
+      short_name: "Tech Educa",
+      description: "Um portal para seu aprendizado!",
+      theme_color: "#46cb8a",
+      icons: [
+        {
+          src: "/img/PWA/maskable_icon_x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "/img/PWA/maskable_icon_x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+        {
+          src: "/img/PWA/maskable_icon_x192.png",
+          sizes: "192x192",
+          type: "image/png",
+          purpose: "maskable",
+        },
+        {
+          src: "/img/PWA/maskable_icon_x512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable",
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: [
+        "**/*.{js,css,html,ico,png,svg,webp}",
+      ],
+    },
   },
 }));

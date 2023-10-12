@@ -1,3 +1,4 @@
+import ManterPWA from "@theme/components/PWA/ManterPWA.vue";
 import NotFound from "@theme/components/404.vue";
 import Link from "@theme/components/Link.vue";
 import Youtube from "@theme/components/Youtube.vue";
@@ -10,6 +11,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       "not-found": () => h(NotFound),
+      "layout-bottom": () => h(ManterPWA),
     });
   },
   enhanceApp({ app }: { app: any }) {
