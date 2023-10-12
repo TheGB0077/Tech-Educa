@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-const baseURL = "https://tech-educa-teste.surge.sh"
 const year = new Date().getFullYear();
 </script>
 
@@ -19,7 +18,7 @@ const year = new Date().getFullYear();
           </li>
 
           <li >
-            <a :href="baseURL + '/sobre'">Sobre</a>
+            <a :href="'/'">Sobre</a>
           </li>
 
 
@@ -30,7 +29,7 @@ const year = new Date().getFullYear();
         <h4>Comunidade</h4>
         <ul>
           <li >
-            <a :href="'https://github.com/'">Github</a>
+            <a :href="'https://github.com/TheGB0077/Tech-Educa/discussions'" target="_blank">Github</a>
           </li>
 
         </ul>
@@ -96,8 +95,9 @@ footer {
   }
   a {
     display: block;
-    padding: 4px 8px;
-    font-weight: 500;
+    padding: 6px 8px;
+    font-weight: 600;
+    font-family: Gilroy, system-ui;
   }
 }
 

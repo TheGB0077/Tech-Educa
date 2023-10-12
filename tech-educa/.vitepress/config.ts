@@ -87,7 +87,7 @@ export default withPwa(defineConfig({
       level: "deep",
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/" },
+      { icon: "github", link: "https://github.com/TheGB0077/Tech-Educa/" },
     ],
   },
 
