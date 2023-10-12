@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
+
 <div class="image-container">
     <img src="/img/todo.webp" style="max-width: 500px; min-width: 300px">
     <h1>Página em desenvolvimento!</h1>

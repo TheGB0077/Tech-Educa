@@ -1,5 +1,4 @@
 import { withPwa } from "@vite-pwa/vitepress";
-import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
@@ -57,7 +56,7 @@ export default withPwa(defineConfig({
 
     editLink: {
       pattern: "https://pr.new/TheGB0077/Tech-Educa/edit/main/tech-educa/:path",
-        text: "Edite esta página no StackBlitz",
+      text: "Edite esta página no StackBlitz",
     },
 
     // https://vitepress.dev/reference/default-theme-config
@@ -96,17 +95,6 @@ export default withPwa(defineConfig({
 
   // Preventa builds quando o conteúdo tem links quebrados
   ignoreDeadLinks: false,
-
-  vite: {
-    resolve: {
-      alias: [
-        {
-          find: /^.*\/NotFound\.vue$/,
-          replacement: fileURLToPath(new URL("./theme/components/404.vue", import.meta.url)),
-        },
-      ],
-    },
-  },
 
   pwa: {
     outDir: "./../dist/",
