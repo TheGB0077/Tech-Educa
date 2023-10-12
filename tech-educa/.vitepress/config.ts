@@ -3,11 +3,6 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
-  vite: {
-    define: {
-      __DATE__: `${new Date().toISOString()}`,
-    },
-  },
   locales: {
     root: {
       label: "Português",

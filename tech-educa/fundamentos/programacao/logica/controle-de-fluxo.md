@@ -7,7 +7,10 @@ Pense da seguinte forma:
 
 ![escolha1](img/escolha_estrada.svg)
 
-<p style="font-size:10px"><a href="https://www.freepik.com/free-vector/way-concept-illustration_7273255.htm" target="_blank">Imagem por storyset</a> em Freepik</p>
+<FonteImg 
+:src="`https://www.freepik.com/free-vector/way-concept-illustration_7273255.htm`"
+:por="'storyset'"
+/>
 
 ### Comando `Se`
 

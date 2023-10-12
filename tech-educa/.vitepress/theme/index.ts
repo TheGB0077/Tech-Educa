@@ -2,6 +2,7 @@ import ManterPWA from "@theme/components/PWA/ManterPWA.vue";
 import NotFound from "@theme/components/404.vue";
 import Link from "@theme/components/Link.vue";
 import Youtube from "@theme/components/Youtube.vue";
+import FonteImg from "@theme/components/FonteImg.vue";
 import DefaultTheme from "vitepress/theme";
 import "./styles/index.scss";
 import { h } from "vue";
@@ -17,5 +18,6 @@ export default {
   enhanceApp({ app }: { app: any }) {
     app.component("Link", Link);
     app.component("Youtube", Youtube);
+    app.component("FonteImg", FonteImg);
   },
 };
