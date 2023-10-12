@@ -3,7 +3,7 @@ const caminhos = [
     title: "Ciência da Computação",
     url: "/em_desenvolvimento",
     large: true,
-    bgImgLight: "/img/ccomp/ccomp-light_2.webp",
+    bgImgLight: "/img/ccomp/ccomp-light.webp",
     bgImgDark: "/img/ccomp/ccomp.webp",
   },
   /*  {

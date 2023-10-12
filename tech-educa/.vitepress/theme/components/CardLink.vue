@@ -41,8 +41,6 @@ const imageStyle = computed(() => ({
 <style scoped lang="scss">
 @import '@theme/styles/vars.scss';
 
-
-
 .link {
   --icon-color: var(--sb-foreground-highlight);
 
@@ -66,11 +64,6 @@ const imageStyle = computed(() => ({
     min-height: 100%;
     border-radius: 8px;
     padding: var(--card-padding-base);
-
-    :root:not(.dark) & {
-      // Fundo transparente para melhoria da legibilidade do texto
-      background-color: rgba(255, 255, 255, 0.45);
-    }
 
     @media (min-width: $bp-medium) {
       --card-padding-base: 28px 36px 32px;
