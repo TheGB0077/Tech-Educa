@@ -1,15 +1,15 @@
 // Vue / Vitepress
+import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import type {Theme} from "vitepress";
 import "./styles/index.scss";
 import { h } from "vue";
 
-//Componentes
-import ManterPWA from "@theme/components/PWA/ManterPWA.vue";
+// Componentes
 import NotFound from "@theme/components/404.vue";
-import Link from "@theme/components/Link.vue";
-import Youtube from "@theme/components/Youtube.vue";
 import FonteImg from "@theme/components/FonteImg.vue";
+import Link from "@theme/components/Link.vue";
+import ManterPWA from "@theme/components/PWA/ManterPWA.vue";
+import Youtube from "@theme/components/Youtube.vue";
 
 export default {
   extends: DefaultTheme,
