@@ -1,0 +1,150 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Portugol",
+  "patterns": [
+    {
+      "include": "#scope"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#function"
+    },
+    {
+      "include": "#operator"
+    },
+    {
+      "include": "#variable"
+    }
+  ],
+
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.portugol",
+          "match": "\\bretorne\\b"
+        },
+        {
+          "name": "keyword.control.conditional.portugol",
+          "match": "\\b(se|entao|senao)\\b"
+        },
+        {
+          "name": "keyword.control.loop.portugol",
+          "match": "\\b(para|ate|faca|passo|enquanto|repita)\\b"
+        },
+        {
+          "name": "storage.type.portugol",
+          "match": "\\b(declare|inteiro|real|caractere|cadeia|logico|caracter)\\b"
+        },
+        {
+          "name": "keyword.function.portugol",
+          "match": "\\b(funcao)\\b"
+        }
+      ]
+    },
+
+    "variable": {
+      "patterns": [
+        {
+          "name": "constant.language.portugol",
+          "match": "\\b(verdadeiro|falso)\\b"
+        },
+        {
+          "name": "constant.numeric.real.portugol",
+          "match": "\\b\\d+(\\.|,)\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.portugol",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assigment.portugol",
+          "match": "<-"
+        },
+        {
+          "name": "keyword.operator.arithmetic.portugol",
+          "match": "\\+|-|/|\\*|mod"
+        },
+        {
+          "name": "keyword.operator.relational.portugol",
+          "match": "=|<>|<|>|<=|>="
+        },
+        {
+          "name": "keyword.operator.logical.portugol",
+          "match": "\\b(ou|e|nao)\\b"
+        }
+      ]
+    },
+
+    "scope": {
+      "patterns": [
+        {
+          "name": "keyword.scope.geral.portugol",
+          "match": "\\b(inicio|Inicio|Fim|fim|var|Var)\\b"
+        },
+        {
+          "name": "keyword.scope.algorithm.portugol",
+          "match": "\\b(algoritmo|fim_algoritmo|fimAlgoritmo|fimalgoritmo)\\b"
+        },
+        {
+          "name": "keyword.scope.conditional.portugol",
+          "match": "\\b(fim_se|fimSe|fimse|fim_senao|fimSenao|fimsenao)\\b"
+        },
+        {
+          "name": "keyword.scope.loop.portugol",
+          "match": "\\b(fim_para|fimPara|fimpara|fim_enquanto|fimEnquanto|fimenquanto)\\b"
+        }
+      ]
+    },
+
+    "function": {
+      "patterns": [
+        {
+          "name": "support.function.io.portugol",
+          "match": "\\b(leia|escreva)\\b"
+        },
+        {
+          "begin": "\\.",
+          "end": "\\(",
+          "patterns": [
+            {
+              "name": "entity.name.function.portugol",
+              "match": "\\w"
+            }
+          ]
+        }
+      ]
+    },
+
+    "comment": {
+      "name": "comment.line.portugol",
+      "begin": "//|#",
+      "end": "\n"
+    },
+    "strings": {
+      "name": "string.quoted.double.portugol",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.portugol",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.portugol"
+}

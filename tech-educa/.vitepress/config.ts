@@ -1,3 +1,7 @@
+// Shiki Imports
+import { BUNDLED_LANGUAGES } from "shiki";
+import portugol from "./assets/portugol.tmLanguage.json";
+
 // Config Imports
 import { withPwa } from "@vite-pwa/vitepress";
 import { defineConfig } from "vitepress";
@@ -37,3 +41,9 @@ export default withPwa(defineConfig({
   pwa: pwaConfigs,
 }));
 
+BUNDLED_LANGUAGES.push({
+  path: "",
+  id: "portugol",
+  scopeName: "source.portugol",
+  grammar: portugol,
+});
