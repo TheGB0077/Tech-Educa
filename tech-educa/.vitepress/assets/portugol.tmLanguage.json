@@ -114,7 +114,7 @@
       "patterns": [
         {
           "name": "support.function.io.portugol",
-          "match": "\\b(leia|escreva)\\b"
+          "match": "\\b(leia|escreva|escreval)\\b"
         },
         {
           "begin": "\\.",
