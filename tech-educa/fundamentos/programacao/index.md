@@ -22,7 +22,7 @@
 
 <Link
 :text="'Arrays e Matrizes'"
-:url="'logica#arrays-e-matrizes'"
+:url="'logica/arrays'"
 />
 
 <Link
