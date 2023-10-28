@@ -1,9 +1,9 @@
-## Arrays
+## Vetores
 
-Arrays são estruturas de dados que permitem **armazenar uma coleção de valores do mesmo tipo**.
-Cada valor é acessado por um índice, que indica a posição do valor no array.
+Vetores (ou array uni-dimensional) são estruturas de dados que permitem **armazenar uma coleção de valores do mesmo tipo**.
+Cada valor no vetor é identificado por um índice, com esse podemos acessar ou alterar o valor armazenado.
 
-Os arrays são declarados da seguinte forma:
+Os vetores são declarados da seguinte forma:
 
 ::: code-group
 
@@ -18,16 +18,22 @@ var
 
 :::
 
-O exemplo acima declara um array chamado `numeros` que pode armazenar até 5 valores do tipo inteiro.
-Visualmente, podemos representar o array da seguinte forma:
+O exemplo acima declara um vetor chamado `numeros` que pode armazenar até 5 valores do tipo inteiro.
+Visualmente, podemos representar o vetor da seguinte forma:
 
 ![](./img/array_exemplo.png)
 
+<FonteImg
+:src="`https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/`"
+:por="'Estefania Cassingena'"
+:em="'freeCodeCamp'"
+/>
+
 Como ilustrado acima, a variável `numeros` está associada a 5 espaços vazios, que podem ser preenchidos com valores do tipo inteiro.
 
-### Como utilizar um array?
+### Como utilizar um vetor?
 
-Para armazenar ou ler um valor em um array, utilizamos o nome da variável seguido de colchetes contendo o `índice` do valor que queremos acessar. Veja o exemplo abaixo:
+Para armazenar ou ler um valor em vetores, utilizamos o nome da variável seguido de colchetes contendo o `índice` do valor que queremos acessar. Veja o exemplo abaixo:
 
 ::: code-group
 
@@ -65,22 +71,28 @@ fimalgoritmo
 :::
 
 :::tip IMPORTANTE
-Na programação é comum que o primeiro índice de um array seja o 0, e não o 1. Isso é conhecido como `numeração baseada em zero`.
+Na programação é comum que o primeiro índice de um vetor seja o 0, e não o 1. Isso é conhecido como `numeração baseada em zero`.
 [Leia mais a respeito](https://www.tabnews.com.br/Diletante/porque-o-indice-de-arrays-tuplas-e-vetores-sao-baseados-em-zero-em-algumas-linguagens).
 :::
 
-É importante ressaltar que o tipo de dado declarado para o array deve ser seguido a risca,
-**tentar armazenar um valor de tipo diferente no array resultará em um erro**.
+É importante ressaltar que o tipo de dado declarado para o vetor deve ser seguido a risca,
+**tentar armazenar um valor de tipo diferente no vetor resultará em um erro**.
 
 ![](./img/array_correta.png)
 
 ![](./img/array_errada.png)
 
+<FonteImg
+:src="`https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/`"
+:por="'Estefania Cassingena'"
+:em="'freeCodeCamp'"
+/>
+
 ---
 
-Uma vez que o array foi declarado, não é possível alterar o seu tamanho.
-O array `numeros` foi declarado para armazenar até 5 valores, mas se precisarmos armazenar 10 valores,
-teremos que declarar um novo array com o tamanho adequado.
+Uma vez que o vetor foi declarado, não é possível alterar o seu tamanho.
+O vetor `numeros` foi declarado para armazenar até 5 valores, mas se precisarmos armazenar 10 valores,
+teremos que declarar um novo vetor com o tamanho adequado.
 
 ::: code-group
 
@@ -129,8 +141,8 @@ fimalgoritmo
 
 :::
 
-O exemplo acima copia os valores do array `numeros` para o array `maisNumeros`, e em seguida,
-preenche os espaços restantes do array `maisNumeros` com os valores de 6 a 10.
+O exemplo acima copia os valores do vetor `numeros` para o segundo vetor `maisNumeros`, e em seguida,
+preenche os espaços restantes de `maisNumeros` com os valores de 6 a 10.
 
 ## Matrizes
 

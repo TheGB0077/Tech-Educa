@@ -21,8 +21,8 @@
 />
 
 <Link
-:text="'Arrays e Matrizes'"
-:url="'logica/arrays'"
+:text="'Vetores e Matrizes'"
+:url="'logica/vetores-e-matrizes'"
 />
 
 <Link

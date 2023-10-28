@@ -59,7 +59,7 @@ export default {
             { text: "Variáveis", link: "/variaveis" },
             { text: "Controle de Fluxo", link: "/controle-de-fluxo" },
             { text: "Laços de Repetição", link: "/repeticao" },
-            { text: "Arrays e Matrizes", link: "/arrays" },
+            { text: "Vetores e Matrizes", link: "/vetores-e-matrizes" },
           ],
         },
       ],
