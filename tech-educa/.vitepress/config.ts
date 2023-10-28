@@ -45,5 +45,6 @@ BUNDLED_LANGUAGES.push({
   path: "",
   id: "portugol",
   scopeName: "source.portugol",
+  // @ts-ignore
   grammar: portugol,
 });
