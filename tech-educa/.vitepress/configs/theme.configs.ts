@@ -1,4 +1,5 @@
 import type { DefaultTheme } from "vitepress/theme";
+import sidebarGen from "../helpers/sidebar_gen";
 
 export default {
   logo: "/img/logo.png",
@@ -47,24 +48,7 @@ export default {
     { text: "Como contribuir!", link: "contribua/como_contribuir" },
   ],
 
-  sidebar: {
-    "/fundamentos/programacao/logica": {
-      base: "/fundamentos/programacao/logica",
-      items: [
-        {
-          text: "Lógica de Programação",
-          collapsed: false,
-          items: [
-            { text: "Portugol", link: "/" },
-            { text: "Variáveis", link: "/variaveis" },
-            { text: "Controle de Fluxo", link: "/controle-de-fluxo" },
-            { text: "Laços de Repetição", link: "/repeticao" },
-            { text: "Vetores e Matrizes", link: "/vetores-e-matrizes" },
-          ],
-        },
-      ],
-    },
-  },
+  sidebar: await sidebarGen(),
   outline: {
     label: "Nesta página",
     level: "deep",
