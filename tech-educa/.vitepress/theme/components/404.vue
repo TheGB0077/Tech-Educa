@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { withBase } from 'vitepress'
+  import { ref } from "vue";
+  import { withBase } from "vitepress";
 
-const root = ref('/')
+  const root = ref("/");
 </script>
 
 <template>
@@ -10,9 +10,7 @@ const root = ref('/')
     <p class="code">404</p>
     <h1 class="title">Página não encontrada</h1>
     <div class="divider" />
-    <blockquote class="quote">
-      Parece que você se perdeu...
-    </blockquote>
+    <blockquote class="quote">Parece que você se perdeu...</blockquote>
 
     <div class="action">
       <a class="link" :href="withBase(root)" aria-label="go to home">
@@ -22,64 +20,66 @@ const root = ref('/')
   </div>
 </template>
 
-<style scoped>
-.NotFound {
-  padding: 64px 24px 96px;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
+<style scoped lang="scss">
   .NotFound {
-    padding: 96px 32px 168px;
+    padding: 64px 24px 96px;
+    text-align: center;
   }
-}
 
-.code {
-  line-height: 64px;
-  font-size: 64px;
-  font-weight: 600;
-}
+  @media (min-width: 768px) {
+    .NotFound {
+      padding: 96px 32px 168px;
+    }
+  }
 
-.title {
-  padding-top: 12px;
-  letter-spacing: 2px;
-  line-height: 20px;
-  font-size: 20px;
-  font-weight: 700;
-}
+  .code {
+    line-height: 64px;
+    font-size: 64px;
+    font-weight: 600;
+  }
 
-.divider {
-  margin: 24px auto 18px;
-  width: 64px;
-  height: 1px;
-  background-color: var(--vp-c-divider);
-}
+  .title {
+    padding-top: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
-.quote {
-  margin: 0 auto;
-  max-width: 256px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-text-2);
-}
+  .divider {
+    margin: 24px auto 18px;
+    width: 64px;
+    height: 1px;
+    background-color: var(--vp-c-divider);
+  }
 
-.action {
-  padding-top: 20px;
-}
+  .quote {
+    margin: 0 auto;
+    max-width: 256px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--vp-c-text-2);
+  }
 
-.link {
-  display: inline-block;
-  border: 1px solid var(--vp-c-brand);
-  border-radius: 16px;
-  padding: 3px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-brand);
-  transition: border-color 0.25s, color 0.25s;
-}
+  .action {
+    padding-top: 20px;
+  }
 
-.link:hover {
-  border-color: var(--vp-c-brand-dark);
-  color: var(--vp-c-brand-dark);
-}
+  .link {
+    display: inline-block;
+    border: 1px solid var(--vp-c-brand);
+    border-radius: 16px;
+    padding: 3px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--vp-c-brand);
+    transition: border-color 0.25s, color 0.25s;
+  }
+
+  $LinkHover: var(--vp-c-text-1);
+
+  .link:hover {
+    border-color: $LinkHover;
+    color: $LinkHover;
+  }
 </style>
