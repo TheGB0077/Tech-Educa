@@ -2,20 +2,20 @@
 layout: home
 ---
 
-<div class="image-container">
+<div class="image-container-in-dev">
     <img src="/img/todo.webp" style="max-width: 500px; min-width: 300px">
     <h1>Página em desenvolvimento!</h1>
 </div>
 
-<style scoped lang="scss">
-    .image-container {
+<style lang="scss">
+    .image-container-in-dev {
         margin-top: 4vh;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .image-container > h1 {
+    .image-container-in-dev > h1 {
         margin: 0;
         padding: 0;
         text-align: center;
@@ -24,16 +24,16 @@ layout: home
     }
 
     @media (max-width: 1280px) {
-        .image-container {
+        .image-container-in-dev {
             min-width: 300px;
             flex-direction: column;
         }
 
-        .image-container > img {
+        .image-container-in-dev > img {
             padding: 0 40px 0 40px;
         }
 
-        .image-container > h1 {
+        .image-container-in-dev > h1 {
             font-size: 1.5rem;
             font-weight: bold;
         }

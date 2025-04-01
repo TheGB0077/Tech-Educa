@@ -246,6 +246,10 @@ Observe que nas matrizes é necessário dois laços de repetição
 aninhados para percorrer todos os valores da matriz. Isso porque um loop é necessário para percorrer as linhas, e outro para percorrer as colunas.
 :::
 
+## Questionário
+
+<iframe src="/fundamentos/programacao/logica/questionarios/matrizes" width="100%" height="700px" frameborder="0" allowfullscreen></iframe>
+
 ## Vídeo Aula
 
 Se restou alguma dúvida, assista a vídeo aula abaixo:

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@ditdot-dev/vue-flow-form": "^2.3.2",
     "@vite-pwa/vitepress": "^0.2.3",
     "@vue/tsconfig": "^0.4.0",
     "dprint": "^0.42.5",
